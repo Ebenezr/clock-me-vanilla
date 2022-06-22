@@ -137,6 +137,14 @@ hr{
     width: 100%;
     height: 100%;
 }
+.empoyee-card-wrapper{
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    place-content: center;
+    place-items: center;
+}
 .card{
     width: 25ch;
     height: 10ch;
@@ -161,6 +169,18 @@ hr{
     flex-direction: row;
     font-weight: 500;
     gap: 0.5rem;
+    position: relative;
+}
+.top::after{
+    content: "";
+    width: 80%;
+    height: 0.07rem;
+    background-color: var(--clr-pry);
+    position: absolute;
+    bottom: 0;
+    justify-self: center;
+    left: 50%;
+    transform: translate(-50%, 50%);
 }
 .card .bottom{
     justify-self: flex-end;
