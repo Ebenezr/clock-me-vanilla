@@ -8,7 +8,9 @@
     <title>Dashboard</title>
 </head>
 <body>
+    <!-- main container -->
     <main id="main">
+        <!-- navigation panel -->
         <nav id="side-bar">
             <div class="logo">
                 <h3>CLOCK-ME</h3>
@@ -19,25 +21,47 @@
                 <buttton class="btn-pry" id="btn-employee">Employees</buttton>
                 <buttton class="btn-pry" id="btn-timecard">Timecard</buttton>
             </div>
-
-
         </nav>
-
+<!-- login page -->
         <section id="login" class="login-signup">
             <aside id="right-side"></aside>
-            <form action="" id="login-form" autocomplete="off">
+            <form action="" class="login-form" id="login-page" autocomplete="off">
                 <div class="logo">
                     <h4>CLOCK-ME</h4>
                 </div>
-                <h3>Login</h3>
+                <h3 class="article-title">Login</h3>
+                <label for="email">Email</label>
                 <input type="text" readonly type="email" onfocus="if (this.hasAttribute('readonly')) {
                     this.removeAttribute('readonly');  // fix for mobile safari to show virtual keyboard
-    this.blur();    this.focus();  }" class="input-field" placeholder="Username">
-                <input type="password" class="input-field"  placeholder="********" readonly type="email" onfocus="if (this.hasAttribute('readonly')) {
+    this.blur();    this.focus();  }" class="input-field" placeholder="Email" id="l-email" name="email">
+               <label for="password">Password</label>
+               <input type="password" class="input-field"  placeholder="********" readonly onfocus="if (this.hasAttribute('readonly')) {
                     this.removeAttribute('readonly');  // fix for mobile safari to show virtual keyboard
-    this.blur();    this.focus();  }">
+    this.blur();    this.focus();  }" id="l-password">
                 <input type="submit" class="input-field btn-sec" value="LOGIN">
-                <span class="signup"><a href="#">Create an Account</a><hr><a href="#">Forgot password</a></span>
+                <span class="signup"><a href="#" id="switch-down">Create an Account</a><hr><a href="#">Forgot password</a></span>
+            </form>
+<!-- signup page -->
+             <form action="" class="login-form" id="signup-page" autocomplete="off"> 
+                <div class="logo">
+                    <h4>CLOCK-ME</h4>
+                </div>
+                <h3 class="article-title">Sign Up</h3>
+                <label for="email">Email</label>
+                <input type="text" readonly type="email" onfocus="if (this.hasAttribute('readonly')) {
+                    this.removeAttribute('readonly');  // fix for mobile safari to show virtual keyboard
+    this.blur();    this.focus();  }" class="input-field" placeholder="Email" id="email" name="email">
+               <label for="password">Password</label>
+               <input type="password" class="input-field"  placeholder="********" readonly onfocus="if (this.hasAttribute('readonly')) {
+                    this.removeAttribute('readonly');  // fix for mobile safari to show virtual keyboard
+    this.blur();    this.focus();  }" id="password">
+<label for="password">Confirm Password</label>
+<input type="password" class="input-field"  placeholder="********" readonly onfocus="if (this.hasAttribute('readonly')) {
+     this.removeAttribute('readonly');  // fix for mobile safari to show virtual keyboard
+this.blur();    this.focus();  }" id="c-password">
+
+                <input type="submit" class="input-field btn-sec" value="SIGN UP">
+                <span class="signup"><a id="switch-up" href="#">Already a user Login?</a></span>
             </form>
         </section>
 
@@ -48,6 +72,7 @@
 <section id="admin" class="main-view" aria-hidden="true">
 
 </section>
+<!-- employee section -->
 <section id="employee" class="main-view" aria-hidden="true">
     <div class="logo view">
         <h4>CLOCK-ME</h4>
@@ -69,11 +94,13 @@
     
     </article>
 </section>
+ <!-- time tard section -->
 <section id="timecard" class="main-view" aria-hidden="true">
     <div class="logo view">
         <h4>CLOCK-ME</h4>
     </div>
     <h3>Clock-in/out</h3>
+   
     <article class="timecard-main-wrapper">
         <input type="search" id="search" placeholder="search by name..">
         
@@ -104,7 +131,9 @@
         </div>
     </article>
 </section>
-    </main>
     
+</main>
+
+<script src="./assets/js/login.js"></script>
 </body>
 </html>

@@ -53,26 +53,37 @@ main{
     border-radius: 1rem;
     grid-template-columns: 60% auto;
     border: solid 0.5rem var(--clr-white);
+    
+
+
+}
+.article-title{
+    margin: 1rem 0;
+    color: var(--clr-pry);
+}
+#login-page{
+    display: block;
+}
+#signup-page{
     display: none;
-
-
 }
 #right-side{
     background-color: var(--clr-pry);
     height: 100%;
     border-radius: 0.5rem 0 0 0.5rem;
 }
-#login-form{
+.login-form{
     height: 100%;
     border-radius: 0 0.5rem 0.5rem 0;
     background-color: var(--clr-secondary);
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 }
 .input-field{
     width: 100%;
+    margin: 1rem 0;
     background-color: var(--clr-white);
     padding: 0.5rem 0.4rem;
     border-radius: 0.3rem;
@@ -114,6 +125,10 @@ hr{
 .buttons-container{
     display: flex;
     flex-direction: column;
+}
+/*components*/
+input{
+    outline: none;
 }
 .btn-pry{
     display: block;
@@ -235,6 +250,7 @@ hr{
 }
 #search{
     grid-area: header;
+    padding: 0.3rem;
     
 
 }
@@ -270,9 +286,16 @@ hr{
 #list-results li:nth-last-child(odd){
     background-color: var(--clr-white);
 
-
 }
 #list-results li:hover, #list-results li:focus{
     background-color: var(--clr-pry);
     color: var(--clr-white);
+}
+/*******/
+#dashboard{
+    display: none;
+
+}
+#admin{
+    display: none;
 }
