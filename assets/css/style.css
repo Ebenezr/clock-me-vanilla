@@ -87,6 +87,7 @@ hr{
 }
 .signup a:hover{
     color:var(--clr-accent);
+    transform: scale(1.1);
 }
 /*side panel style*/
 #side-bar{
