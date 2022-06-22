@@ -254,6 +254,7 @@ hr{
     
 
 }
+/*employee profile*/
 .main-card img{
     display: block;
     width: 10rem;
@@ -261,3 +262,17 @@ hr{
     object-fit: cover;
     background-color: #14213D;
 } 
+#list-results{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
+#list-results li:nth-last-child(odd){
+    background-color: var(--clr-white);
+
+
+}
+#list-results li:hover, #list-results li:focus{
+    background-color: var(--clr-pry);
+    color: var(--clr-white);
+}
