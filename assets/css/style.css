@@ -31,13 +31,74 @@ main{
     overflow: hidden;
     align-items: center;
     padding: 1rem;
+    position: relative;
 
 }
+#login{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--clr-pry);
+    z-index: 99;
+    display: grid;
+    border-radius: 1rem;
+    grid-template-columns: 60% auto;
+    border: solid 0.5rem var(--clr-white);
+
+
+}
+#right-side{
+    background-color: var(--clr-pry);
+    height: 100%;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+#login-form{
+    height: 100%;
+    border-radius: 0 0.5rem 0.5rem 0;
+    background-color: var(--clr-secondary);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.input-field{
+    width: 100%;
+    background-color: var(--clr-white);
+    padding: 0.5rem 0.4rem;
+    border-radius: 0.3rem;
+    outline: none;
+    border: none;
+
+}
+.signup{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+hr{
+    border: var(--clr-pry) 0.03rem s+
+    olid;
+}
+.signup a{
+    text-decoration: none;
+    padding: 0 1rem;
+    font-size: 0.7rem;
+    color: var(--clr-pry);
+}
+.signup a:hover{
+    color:var(--clr-accent);
+}
+/*side panel style*/
 #side-bar{
     height: 100%;
     /* background-color: var(--clr-accent); */
     display: flex;
     flex-direction: column;
+}
+.logo{
+    width: 100%;
+    padding: 2rem 0;
+    color: var(--clr-white);
 }
 .buttons-container{
     display: flex;
@@ -55,6 +116,7 @@ main{
     background-color: var(--clr-accent);
     color: var(--clr-pry);
 }
+/*main view syle*/
 .main-view{
     background-color: var(--clr-white);
     height: 100%;

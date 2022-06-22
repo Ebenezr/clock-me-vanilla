@@ -22,6 +22,24 @@
 
 
         </nav>
+
+        <section id="login" class="login-signup">
+            <aside id="right-side"></aside>
+            <form action="" id="login-form" autocomplete="off">
+                <div class="logo">
+                    <h4>CLOCK-ME</h4>
+                </div>
+                <h3>Login</h3>
+                <input type="text" readonly type="email" onfocus="if (this.hasAttribute('readonly')) {
+                    this.removeAttribute('readonly');  // fix for mobile safari to show virtual keyboard
+    this.blur();    this.focus();  }" class="input-field" placeholder="Username">
+                <input type="password" class="input-field" placeholder="********" readonly type="email" onfocus="if (this.hasAttribute('readonly')) {
+                    this.removeAttribute('readonly');  // fix for mobile safari to show virtual keyboard
+    this.blur();    this.focus();  }">
+                <input type="submit" class="input-field" value="LOGIN">
+                <span class="signup"><a href="#">Create an Account</a><hr><a href="#">Forgot password</a></span>
+            </form>
+        </section>
 <section id="dashboard" class="main-view" >
 
 </section>
