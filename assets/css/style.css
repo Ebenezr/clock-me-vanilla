@@ -123,6 +123,21 @@ hr{
     background-color: transparent;
     color: var(--clr-white);
 }
+.btn-sec{
+    display: inline-block;
+    padding: 0.4rem 2rem;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: var(--clr-pry);
+    color: var(--clr-white); 
+    outline: none;
+
+}
+.btn-sec.active{
+    background-color: transparent;
+    border: solid var(--clr-pry) 0.001rem;
+    color: var(--clr-pry);
+}
 .btn-pry:hover, .btn-pry:focus-within{
     background-color: var(--clr-accent);
     color: var(--clr-pry);
@@ -131,11 +146,17 @@ hr{
     background-color: var(--clr-accent);
     color: var(--clr-white);
 }
+/*********************************************/
 /*employee panel*/
+.logo.view{
+    color: var(--clr-pry);
+}
 #employee{
     
     width: 100%;
     height: 100%;
+    color: var(--clr-pry);
+    display: none;
 }
 .empoyee-card-wrapper{
     padding: 0.5rem;
@@ -194,3 +215,49 @@ hr{
     font-size: 0.6rem;
     color: var(--clr-accent);
 }
+/***********************************/
+/*timestamp*/
+#timecard{
+    width: 100%;
+    height: 100%;
+    
+}
+.timecard-main-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2rem auto;
+    grid-template-areas:
+    "header main"
+    "results main";
+    grid-gap:1rem;
+    
+
+}
+#search{
+    grid-area: header;
+    
+
+}
+#search-result{
+    grid-area: results;
+    background-color: var(--clr-secondary);
+    padding-top: 0;
+}
+.main-card{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-secondary);
+    border-radius: 0.7rem;
+    padding: 1rem;
+    gap: 1rem;
+    
+
+}
+.main-card img{
+    display: block;
+    width: 10rem;
+    height: 12rem;
+    object-fit: cover;
+    background-color: #14213D;
+} 
