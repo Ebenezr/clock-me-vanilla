@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         admin.style.display="none"
         employee.style.display="none"
         timecard.style.display="none"
+        dashboard.style.display="block"
 
     })
 
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         dashboard.style.display="none"
         employee.style.display="none"
         timecard.style.display="none"
+        admin.style.display="block"
 
     })
     employeeBtn.addEventListener('click',(event)=>{
@@ -31,6 +33,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         admin.style.display="none"
         dashboard.style.display="none"
         timecard.style.display="none"
+        employee.style.display="block"
 
     })
     timecardBtn.addEventListener('click',(event)=>{
@@ -38,6 +41,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         admin.style.display="none"
         employee.style.display="none"
         dashboard.style.display="none"
+        timecard.style.display="block"
 
     })
 

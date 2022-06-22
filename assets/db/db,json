@@ -1,0 +1,13 @@
+{
+    "users":[
+        {
+            "id":1,
+            "email":"ebe@mail.com",
+            "password":"123r",
+            "name":"Bukosia Ebenezar",
+            "designation":"Graphics Designer",
+            "time-in":[],
+            "time-out":[]
+        }
+    ]
+}
