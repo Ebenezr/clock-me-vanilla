@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     
     clockIn.addEventListener('click',()=>{
         clockInTime()
+        
     
     });
    
@@ -67,11 +68,11 @@ function clockOutTime(users){
     timeOut=new Date();
     clockOut.addEventListener('click',()=>{
     for(let data of users){
-        if (userTitle.innerText === data.name){
-            const index = users.indexOf(data);
+        if (userId.innerText === data.id){
+            const index = users.indexOf(users);
             
             let newtimestamp=`${timeIn} - ${timeOut}`
-            console.log(newtimestamp);
+            //console.log(newtimestamp);
             const upDateInfo = { 
                 id: data.id,
                 email: data.email,
@@ -83,19 +84,21 @@ function clockOutTime(users){
     //console.log(newVotes)
     
             fetch(`http://localhost:3000/users/${index + 1}`,{ 
-                method:'POST',
+                method:'PATCH',
                 headers:{
-                    'Content-Type':'application/json'
+                    'Accept': 'application/json',
+                    'Content-type': 'application/json; charset=UTF-8'
                 },
                 body:JSON.stringify(upDateInfo)
             })
             .then(res => res.json())
             .then(users => {
-                console.log('Okay Google - 200');
+                //console.log(users)
+                
                 appendTimestamp(users)
             })
             .catch(function (){ 
-                console.log('Google-  not so OK');
+                
             })       
         }else{
 
