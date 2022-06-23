@@ -279,12 +279,16 @@ input{
     object-fit: cover;
     background-color: #14213D;
 } 
-#list-results{
+#timestamp-results{
     list-style: none;
     width: 100%;
     text-align: center;
+    font-size: rem;
 }
-#list-results li:nth-last-child(odd){
+#timestamp-results li{
+    font-size: 0.5rem;
+}
+#timestamp-results li:nth-last-child(odd){
     background-color: var(--clr-white);
 
 }

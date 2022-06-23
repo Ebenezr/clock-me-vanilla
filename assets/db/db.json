@@ -6,7 +6,20 @@
       "password": "123r",
       "name": "Bukosia Ebenezar",
       "designation": "Graphics Designer",
-      "timestamp": []
+      "timestamp": [
+        [
+          "Thu, 23 Jun 2022 07:21:09  GMT - Thu, 23 Jun 2022 17:21:09  GMT"
+        ],
+        [
+          "Fri, 24 Jun 2022 07:41:09  GMT - Fri, 24 Jun 2022 17:21:09  GMT"
+        ],
+        [
+            "Sat, 25 Jun 2022 07:21:09  GMT - Thu, 25 Jun 2022 17:01:09  GMT"
+          ],
+          [
+            "Sun, 26 Jun 2022 09:21:09  GMT - Fri, 26 Jun 2022 16:01:09  GMT"
+          ]
+      ]
     },
     {
       "id": "N65677",

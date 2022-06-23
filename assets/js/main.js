@@ -1,3 +1,4 @@
+//const fetch = require('node-fetch');
 let timeIn;
 let timeOut;
 document.addEventListener('DOMContentLoaded',()=>{
@@ -17,12 +18,15 @@ let usersList=document.getElementById('list-results');
 let userTitle=document.getElementById('title');
 let userDesignation=document.getElementById('designation');
 let userId = document.getElementById('id');
+let timeStampList=document.getElementById('timestamp-results');
 function fetchData() {
     fetch("http://localhost:3000/users")
       .then((resp) => resp.json())
       .then((users) => {
+      
           renderUsers(users);
           clockOutTime(users);
+          appendTimestamp(users)
     });
 }
 function renderUsers(users){
@@ -36,11 +40,21 @@ function renderUsers(users){
             userTitle.textContent=users.name;
             userDesignation.textContent=users.designation;
             userId.textContent=users.id;
+            appendTimestamp(users)
+            
+            
 
         })
 
     })
 
+}
+function appendTimestamp(users){
+    for (let i in users.timestamp){
+        let li=document.createElement('li');    2
+        li.innerHTML=users.timestamp[i];
+        timeStampList.appendChild(li);
+    }
 }
 
 
@@ -56,20 +70,20 @@ function clockOutTime(users){
         if (userTitle.innerText === data.name){
             const index = users.indexOf(data);
             
-            var timestamp=`${timeIn} - ${timeOut}`
-            //return timestamp;
+            let newtimestamp=`${timeIn} - ${timeOut}`
+            console.log(newtimestamp);
             const upDateInfo = { 
                 id: data.id,
                 email: data.email,
                 password: data.password,
                 name:data.name,
                 designation:data.designation,
-                timestamp:data.timestamp
+                timestamp:newtimestamp
             };
     //console.log(newVotes)
     
             fetch(`http://localhost:3000/users/${index + 1}`,{ 
-                method:'PUT',
+                method:'POST',
                 headers:{
                     'Content-Type':'application/json'
                 },
@@ -77,10 +91,12 @@ function clockOutTime(users){
             })
             .then(res => res.json())
             .then(users => {
-                console.log(users)
-                //characterVote.innerText = element.votes; 
+                console.log('Okay Google - 200');
+                appendTimestamp(users)
             })
-            .catch(e => setTimeout(alert(e.message), 3000));       
+            .catch(function (){ 
+                console.log('Google-  not so OK');
+            })       
         }else{
 
         }
