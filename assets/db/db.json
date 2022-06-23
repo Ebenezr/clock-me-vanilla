@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": "G14556",
+      "email": "ebe@mail.com",
+      "password": "123r",
+      "name": "Bukosia Ebenezar",
+      "designation": "Graphics Designer",
+      "timestamp": []
+    },
+    {
+      "id": "N65677",
+      "email": "mac@mail.com",
+      "password": "123t",
+      "name": "Mac Alex",
+      "designation": "Network Admin",
+      "timestamp": []
+    }
+  ]
+}
