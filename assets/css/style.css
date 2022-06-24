@@ -39,6 +39,9 @@ i {
   font-size: 0.9rem;
   color: var(--clr-accent);
 }
+.btn-pry:hover i {
+  transform: scale(1.2);
+}
 /*main view syle*/
 .view-container {
   background-color: var(--clr-white);
@@ -154,11 +157,7 @@ input {
   border: solid var(--clr-pry) 0.001rem;
   color: var(--clr-pry);
 }
-.btn-pry:hover,
-.btn-pry:focus-within {
-  background-color: var(--clr-accent);
-  color: var(--clr-pry);
-}
+
 .btn-sec:hover,
 .btn-sec:focus-within {
   background-color: var(--clr-accent);
