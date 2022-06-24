@@ -24,11 +24,14 @@ function fetchData() {
       renderUsers(users);
       clockOutTime(users);
       appendTimestamp(users);
+      calSalary(users);
     });
 }
+
 function renderUsers(users) {
   users.forEach((users) => {
     let list = document.createElement("li");
+
     list.innerText = users.name;
     usersList.appendChild(list);
 
@@ -37,14 +40,17 @@ function renderUsers(users) {
       userTitle.textContent = users.name;
       userDesignation.textContent = users.designation;
       userId.textContent = users.id;
+      timeStampList.innerHTML = "";
       appendTimestamp(users);
+
+      //timeStampList.reload();
     });
   });
 }
 function appendTimestamp(users) {
   for (let i in users.timestamp) {
     let li = document.createElement("li");
-    2;
+    li.className = "timestamps-list";
     li.innerHTML = users.timestamp[i];
     timeStampList.appendChild(li);
   }
@@ -56,24 +62,29 @@ function clockInTime() {
 }
 function clockOutTime(users) {
   timeOut = new Date();
-  clockOut.addEventListener("click", () => {
+
+  clockOut.addEventListener("click", (event) => {
     for (let data of users) {
       if (userId.innerText === data.id) {
         const index = users.indexOf(data);
+        let upDateInfo = {};
 
-        let newtimestamp = [
-          `${timeIn.toGMTString()} - ${timeOut.toGMTString()}`,
-        ];
-        let newt = [...newtimestamp];
-        //console.log(newtimestamp);
-        const upDateInfo = {
-          id: data.id,
-          email: data.email,
-          password: data.password,
-          name: data.name,
-          designation: data.designation,
-          timestamp: [...newt],
-        };
+        function upDateStamp() {
+          let newtimestamp = [
+            `${timeIn.toGMTString()} - ${timeOut.toGMTString()}`,
+          ];
+          var newt = [[...newtimestamp]];
+
+          //          newt[0].push(newtimestamp);
+
+          //console.log(newtimestamp);
+          upDateInfo = {
+            timestamp: [...newt],
+          };
+        }
+
+        upDateStamp();
+
         //console.log(newVotes)
 
         fetch(`http://localhost:3000/users/${index + 1}`, {
@@ -87,7 +98,7 @@ function clockOutTime(users) {
           .then((res) => res.json())
           .then((users) => {
             //console.log(users)
-
+            // calSalary(users);
             appendTimestamp(users);
           })
           .catch(function () {});
@@ -110,6 +121,39 @@ searchBar.addEventListener("keyup", (event) => {
 
   userListr.forEach((element) => renderUsers(element));
 });
+
+function calSalary(users) {
+  let mainCard = document.getElementById("main-card");
+  let timeIn;
+  mainCard.addEventListener("click", () => {
+    //console.log("yes");
+    for (let data of users) {
+      if (userId.innerText === data.id) {
+        //   const index = users.indexOf(data);
+        // console.log(data.timestamp);
+        for (let i in data.timestamp) {
+          timeIn = data.timestamp[i].split("-");
+          //console.log(timeIn[0]);
+          // console.log(timeIn[1]);
+          //console.log("nope");
+        }
+        //convert date f=string back to date obj
+        var serialized = JSON.stringify(timeIn[0]);
+        var tStart = new Date(JSON.parse(serialized));
+        var serializedp = JSON.stringify(timeIn[1]);
+        var tEnd = new Date(JSON.parse(serializedp));
+
+        console.log(tStart);
+
+        //console.log(deserialized.getHours());
+        let now = new Date();
+        now.toGMTString();
+        // console.log(typeof now);
+        //console.log(now.toGMTString());
+      }
+    }
+  });
+}
 
 // class Timestamp{
 //     constructor(clockIn,clockOut,timeStamp){

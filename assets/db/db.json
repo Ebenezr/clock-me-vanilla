@@ -7,7 +7,10 @@
       "name": "Bukosia Ebenezar",
       "designation": "Graphics Designer",
       "timestamp": [
-        "Fri Jun 24 2022 09:24:42 GMT+0300 (East Africa Time) - Fri Jun 24 2022 09:23:43 GMT+0300 (East Africa Time)"
+         "Thr, 23 Jun 2022 07:30:33 GMT - Thr, 23 Jun 2022 17:24:14 GMT",
+        
+          "Fri, 24 Jun 2022 07:41:12 GMT - Fri, 24 Jun 2022 17:24:19 GMT"
+        
       ]
     },
     {
@@ -17,7 +20,57 @@
       "name": "Mac Alex",
       "designation": "Network Admin",
       "timestamp": [
-        "Fri, 24 Jun 2022 06:34:10 GMT - Fri, 24 Jun 2022 06:34:07 GMT"
+        [
+          "Fri, 24 Jun 2022 08:21:21 GMT - Fri, 24 Jun 2022 08:21:11 GMT"
+        ]
+      ]
+    },
+     {
+      "id": "3",
+      "email": "joy@mail.com",
+      "password": "123t",
+      "name": "Joy Auma",
+      "designation": "Network Admin",
+      "timestamp": [
+        [
+          "Fri, 24 Jun 2022 08:21:21 GMT - Fri, 24 Jun 2022 08:21:11 GMT"
+        ]
+      ]
+    },
+     {
+      "id": "4",
+      "email": "daicy@mail.com",
+      "password": "123t",
+      "name": "Daicy Chep",
+      "designation": "HR",
+      "timestamp": [
+        [
+          "Fri, 24 Jun 2022 08:21:21 GMT - Fri, 24 Jun 2022 08:21:11 GMT"
+        ]
+      ]
+    },
+     {
+      "id": "5",
+      "email": "eli@mail.com",
+      "password": "123t",
+      "name": "Elvis Kim",
+      "designation": "Engineer",
+      "timestamp": [
+        [
+          "Fri, 24 Jun 2022 08:21:21 GMT - Fri, 24 Jun 2022 08:21:11 GMT"
+        ]
+      ]
+    },
+     {
+      "id": "6",
+      "email": "jared@mail.com",
+      "password": "123t",
+      "name": "Jared Otis",
+      "designation": "Senior Dev",
+      "timestamp": [
+        [
+          "Fri, 24 Jun 2022 08:21:21 GMT - Fri, 24 Jun 2022 08:21:11 GMT"
+        ]
       ]
     }
   ]
