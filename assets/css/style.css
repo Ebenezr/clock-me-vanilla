@@ -53,6 +53,7 @@ ul {
   overflow: hidden;
   padding: 1rem;
 }
+/*********************************************/
 /*login panel*/
 #login {
   width: 100%;
@@ -61,8 +62,9 @@ ul {
   background-color: var(--clr-pry);
 
   display: grid;
+  grid-template-columns: 1fr 1fr; 
   border-radius: 1rem;
-  grid-template-columns: 60% auto;
+  
   border: solid 0.5rem var(--clr-white);
   display: block;
 }
@@ -72,13 +74,15 @@ ul {
 }
 #login-page {
   display: block;
+ 
+  
+  
 }
-#signup-page {
-  display: block;
-}
+
 #right-side {
+   
   background-color: var(--clr-pry);
-  height: 100%;
+  
   border-radius: 0.5rem 0 0 0.5rem;
 }
 .login-form {

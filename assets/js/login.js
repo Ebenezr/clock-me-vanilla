@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetchusers();
+  fetchUsers();
 });
 const logInForm = document.getElementById("login-page");
-const userEmail = document.getElementById("l-email").value;
-const userPassword = document.getElementById("l-password").value;
-function users() {
+const email = document.getElementById("l-email").value;
+const password = document.getElementById("l-password").value;
+function fetchUsers() {
   fetch("http://localhost:3000/users")
     .then((resp) => resp.json())
     .then((users) => {
@@ -12,23 +12,71 @@ function users() {
     });
 }
 function loginAuth(users) {
-  users.forEach((element) => {
+ 
     logInForm.addEventListener("submit", () => {
-      if (!(userEmail.value === data.email)) {
-        console.log("user dosent exist");
-        return;
-      }
-      if (!(userPassword.value === data.password)) {
-        console.log("wrong password");
-        return;
-      }
-      if (!(data.usertype === "admin")) {
-        console.log("disable admin panel");
-      }
-      console.log("you're loged in my friend");
-      return;
+      //if (emailArray.indexOf(email) == -1) {
+    
+
+        let acc; 
+        for (let data of users)  {
+
+        if (email === data.email) {
+            acc = account.email;
+            alert("yess")
+        }
+      
+        if (acc == null) {
+           alert("Not a registered username");
+           // res.render('login', { layout: false, wrongu: incorrectu });
+            return;
+        }};
+    
+
+
+        // if(email!==data.email){
+        // // if (email == "") {
+        // //   alert("Email required.");
+          
+        // // }
+        // // if(password == ""){
+        // //   alert("password required");
+        // //   return;
+        // // }
+        // alert("user doesnt exist");
+        // return;
+
+    
+    
+
+    // alert("Email does not exist.");
+    // email.textContent = "";
+    // password.textContent = "";
+    // return;
+  
+  //check if password field is empty and if password is kinked to any email
+  //else if (passwordArray[i] != password) {
+    // if (password == "") {
+    //   alert("Password required.");
+    //   return;
+    // }
+    // alert("Password does not match.");
+    // email.textContent = "";
+    // password.textContent = "";
+    // return;
+  //}
+  //if verification true..
+  // else {
+  //   alert(email + " Login Successful.");
+  //   email.textContent = "";
+  //   password.textContent = "";
+  //   //window.location.
+  //   const loginWrapper = document.getElementById("login");
+  //   loginWrapper.style.display = "none";
+
+  //   return;
+  // }
     });
-  });
+  
 }
 // document.addEventListener("DOMContentLoaded", () => {
 //   const loginWrapper = document.getElementById("login");
