@@ -15,6 +15,7 @@ function fetchEmployees() {
     .then((users) => {
       renderEmployees(users);
       updateEmpoyee(users);
+      deleteEmpoyee(users);
     });
 }
 function renderEmployees(users) {
@@ -87,7 +88,6 @@ function deleteEmpoyee(users) {
             Accept: "application/json",
             "Content-type": "application/json; charset=UTF-8",
           },
-          body: JSON.stringify(upDateInfo),
         })
           .then((res) => res.json())
           .then((users) => {

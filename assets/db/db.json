@@ -12,18 +12,6 @@
       ]
     },
     {
-      "id": "2",
-      "email": "mac@mail.com",
-      "password": "123t",
-      "name": "Mac Alex",
-      "designation": "Network Admin",
-      "timestamp": [
-        [
-          "Fri, 24 Jun 2022 08:21:21 GMT - Fri, 24 Jun 2022 08:21:11 GMT"
-        ]
-      ]
-    },
-    {
       "id": "3",
       "email": "joy@mail.com",
       "password": "123t",

@@ -25,7 +25,6 @@ function fetchData() {
       renderUsers(users);
       clockOutTime(users);
       appendTimestamp(users);
-      calSalary(users);
     });
 }
 
