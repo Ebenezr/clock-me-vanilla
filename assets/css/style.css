@@ -127,8 +127,9 @@ input {
 }
 .btn-pry {
   display: block;
-  width: 100%;
-  padding: 1rem 0.3rem;
+  width: 90%;
+  border-radius: 0.3rem;
+  padding: 0.7rem 0.3rem;
   border: none;
   background-color: transparent;
   color: var(--clr-white);
