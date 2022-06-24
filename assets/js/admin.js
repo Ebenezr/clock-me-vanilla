@@ -6,8 +6,9 @@ let adminId = document.getElementById("admin-id");
 let adminName = document.getElementById("admin-name");
 let adminEmail = document.getElementById("admin-email");
 let adminTitle = document.getElementById("admin-designation");
-let userDel = document.getElementById("admin-delete");
+const userDel = document.getElementById("admin-delete");
 let adminPassword = document.getElementById("admin-password");
+const adminAdd = document.getElementById("admin-add");
 const adminForm = document.getElementById("admin-form");
 function fetchEmployees() {
   fetch("http://localhost:3000/users")
@@ -16,6 +17,7 @@ function fetchEmployees() {
       renderEmployees(users);
       updateEmpoyee(users);
       deleteEmpoyee(users);
+      addEmpoyee(users);
     });
 }
 function renderEmployees(users) {
@@ -98,6 +100,39 @@ function deleteEmpoyee(users) {
           .catch(function () {});
       } else {
       }
+    }
+  });
+}
+function addEmpoyee(users) {
+  adminAdd.addEventListener("click", (event) => {
+    event.preventDefault();
+    for (let data of users) {
+      let upDateInfo = {};
+      upDateInfo = {
+        id: adminId.value,
+        email: adminEmail.value,
+        password: adminPassword.value,
+        name: adminName.value,
+        designation: adminTitle.value,
+      };
+
+      //console.log(newVotes)
+
+      fetch(`http://localhost:3000/users`, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-type": "application/json; charset=UTF-8",
+        },
+        body: JSON.stringify(upDateInfo),
+      })
+        .then((res) => res.json())
+        .then((users) => {
+          alert("Successfuly Added");
+          //console.log(users)
+          // calSalary(users);
+        })
+        .catch(function () {});
     }
   });
 }
