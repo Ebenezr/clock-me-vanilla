@@ -1,33 +1,24 @@
 {
   "users": [
     {
-      "id": "G14556",
+      "id": "1",
       "email": "ebe@mail.com",
       "password": "123r",
       "name": "Bukosia Ebenezar",
       "designation": "Graphics Designer",
       "timestamp": [
-        [
-          "Thu, 23 Jun 2022 07:21:09  GMT - Thu, 23 Jun 2022 17:21:09  GMT"
-        ],
-        [
-          "Fri, 24 Jun 2022 07:41:09  GMT - Fri, 24 Jun 2022 17:21:09  GMT"
-        ],
-        [
-          "Sat, 25 Jun 2022 07:21:09  GMT - Thu, 25 Jun 2022 17:01:09  GMT"
-        ],
-        [
-          "Sun, 26 Jun 2022 09:21:09  GMT - Fri, 26 Jun 2022 16:01:09  GMT"
-        ]
+        "Fri Jun 24 2022 09:24:42 GMT+0300 (East Africa Time) - Fri Jun 24 2022 09:23:43 GMT+0300 (East Africa Time)"
       ]
     },
     {
-      "id": "N65677",
+      "id": "2",
       "email": "mac@mail.com",
       "password": "123t",
       "name": "Mac Alex",
       "designation": "Network Admin",
-      "timestamp": []
+      "timestamp": [
+        "Fri, 24 Jun 2022 06:34:10 GMT - Fri, 24 Jun 2022 06:34:07 GMT"
+      ]
     }
   ]
 }
