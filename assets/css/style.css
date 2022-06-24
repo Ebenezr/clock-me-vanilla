@@ -42,6 +42,9 @@ i {
 .btn-pry:hover i {
   transform: scale(1.2);
 }
+ul {
+  list-style: none;
+}
 /*main view syle*/
 .view-container {
   background-color: var(--clr-white);
