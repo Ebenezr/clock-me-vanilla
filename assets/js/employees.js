@@ -15,8 +15,7 @@ function fetchEmployeesData() {
 function appendCard(users) {
   users.forEach((users) => {
     let list = document.createElement("li");
-    cardName.textContent = users.name;
-    cardTitle.textContent = users.designation;
+
     list.innerHTML = `
     <div class=card>
     <div class=top>

@@ -59,12 +59,12 @@ ul {
   height: 100%;
   position: absolute;
   background-color: var(--clr-pry);
-  z-index: 99;
+
   display: grid;
   border-radius: 1rem;
   grid-template-columns: 60% auto;
   border: solid 0.5rem var(--clr-white);
-  display: none;
+  display: block;
 }
 .article-title {
   margin: 1rem 0;
@@ -74,7 +74,7 @@ ul {
   display: block;
 }
 #signup-page {
-  display: none;
+  display: block;
 }
 #right-side {
   background-color: var(--clr-pry);
@@ -296,11 +296,15 @@ input {
 /*******/
 #dashboard {
   display: none;
+  width: 100%;
+  height: 100%;
 }
 /***********************************************************/
 /*ADMIN SECTION*/
 #admin {
   display: none;
+  width: 100%;
+  height: 100%;
 }
 #admin-form {
   height: 100%;
