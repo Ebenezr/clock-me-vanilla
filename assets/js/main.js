@@ -16,6 +16,7 @@ let usersList = document.getElementById("list-results");
 let userTitle = document.getElementById("title");
 let userDesignation = document.getElementById("designation");
 let userId = document.getElementById("id");
+let userEmail = document.getElementById("user-email");
 let timeStampList = document.getElementById("timestamp-results");
 function fetchData() {
   fetch("http://localhost:3000/users")
@@ -33,6 +34,7 @@ function renderUsers(users) {
     let list = document.createElement("li");
 
     list.innerText = users.name;
+    usersList.style.listStyle = "none";
     usersList.appendChild(list);
 
     //render spefic movie details
@@ -40,6 +42,7 @@ function renderUsers(users) {
       userTitle.textContent = users.name;
       userDesignation.textContent = users.designation;
       userId.textContent = users.id;
+      userEmail.textContent = users.email;
       timeStampList.innerHTML = "";
       appendTimestamp(users);
 
@@ -122,38 +125,38 @@ searchBar.addEventListener("keyup", (event) => {
   userListr.forEach((element) => renderUsers(element));
 });
 
-function calSalary(users) {
-  let mainCard = document.getElementById("main-card");
-  let timeIn;
-  mainCard.addEventListener("click", () => {
-    //console.log("yes");
-    for (let data of users) {
-      if (userId.innerText === data.id) {
-        //   const index = users.indexOf(data);
-        // console.log(data.timestamp);
-        for (let i in data.timestamp) {
-          timeIn = data.timestamp[i].split("-");
-          //console.log(timeIn[0]);
-          // console.log(timeIn[1]);
-          //console.log("nope");
-        }
-        //convert date f=string back to date obj
-        var serialized = JSON.stringify(timeIn[0]);
-        var tStart = new Date(JSON.parse(serialized));
-        var serializedp = JSON.stringify(timeIn[1]);
-        var tEnd = new Date(JSON.parse(serializedp));
+// function calSalary(users) {
+//   let mainCard = document.getElementById("main-card");
+//   let timeIn;
+//   mainCard.addEventListener("click", () => {
+//     //console.log("yes");
+//     for (let data of users) {
+//       if (userId.innerText === data.id) {
+//         //   const index = users.indexOf(data);
+//         // console.log(data.timestamp);
+//         for (let i in data.timestamp) {
+//           timeIn = data.timestamp[i].split("-");
+//           //console.log(timeIn[0]);
+//           // console.log(timeIn[1]);
+//           //console.log("nope");
+//         }
+//         //convert date f=string back to date obj
+//         var serialized = JSON.stringify(timeIn[0]);
+//         var tStart = new Date(JSON.parse(serialized));
+//         var serializedp = JSON.stringify(timeIn[1]);
+//         var tEnd = new Date(JSON.parse(serializedp));
 
-        console.log(tStart);
+//         console.log(tStart);
 
-        //console.log(deserialized.getHours());
-        let now = new Date();
-        now.toGMTString();
-        // console.log(typeof now);
-        //console.log(now.toGMTString());
-      }
-    }
-  });
-}
+//         //console.log(deserialized.getHours());
+//         let now = new Date();
+//         now.toGMTString();
+//         // console.log(typeof now);
+//         //console.log(now.toGMTString());
+//       }
+//     }
+//   });
+// }
 
 // class Timestamp{
 //     constructor(clockIn,clockOut,timeStamp){

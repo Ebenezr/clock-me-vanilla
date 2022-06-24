@@ -74,7 +74,45 @@ this.blur();    this.focus();  }" id="c-password">
 
             </section>
             <section id="admin" class="main-view" aria-hidden="true">
+                <div class="logo view">
+                    <h4>CLOCK-ME</h4>
+                </div>
+                <h3>Clock-in/out</h3>
 
+                <article class="timecard-main-wrapper">
+                    <input type="search" id="search" placeholder="search by name..">
+
+                    <div class="search-results">
+                        <ul id="admin-results" class="list-results">
+                        </ul>
+                    </div>
+                    <div class="main-card" id="main-card">
+                        <div class="profile">
+                            <img src="#" alt="img">
+                            <form action="" id="admin-form">
+
+                                <label for="admin-id">ID</label>
+                                <input type="text" class="admin-input" id="admin-id" placeholder="Employee Id">
+
+                                <label for="admin-name">Name</label>
+                                <input type="text" class="admin-input" id="admin-name" placeholder="Employee Name">
+                                <label for="admin-email">Email</label>
+                                <input type="text" class="admin-input" id="admin-email" placeholder="Employee Email">
+                                <label for="admin-password">Password</label>
+                                <input type="text" class="admin-input" id="admin-password"
+                                    placeholder="Employee Password">
+                                <label for="admin-designation">Title</label>
+                                <input type="text" class="admin-input" id="admin-designation"
+                                    placeholder="Employee Title">
+                                <span class="btn-wrapper">
+                                    <input type="submit" value="Update" class="btn-sec update">
+                                    <input type="reset" value="Reset" class="btn-sec">
+                                    <input type="button" value="Delete" class="btn-sec delete">
+                                </span>
+                            </form>
+                        </div>
+                    </div>
+                </article>
             </section>
             <!-- employee section -->
             <section id="employee" class="main-view" aria-hidden="true">
@@ -109,7 +147,7 @@ this.blur();    this.focus();  }" id="c-password">
                     <input type="search" id="search" placeholder="search by name..">
 
                     <div class="search-results">
-                        <ul id="list-results">
+                        <ul class="list-results" id="list-results">
 
                         </ul>
 
@@ -119,6 +157,7 @@ this.blur();    this.focus();  }" id="c-password">
                             <img src="#" alt="img">
                             <h3 id="title">Dennis Kwamboka</h3>
                             <h5 id="designation">Technical Support</h5>
+                            <h6 id="user-email">deniss@mail.com</h6>
                             <h5>Staff ID: <span id="id">84646R</span></h5>
                             <span>
                                 <button id="clock-in" class="btn-sec">Clock-in</button>
@@ -137,7 +176,7 @@ this.blur();    this.focus();  }" id="c-password">
             </section>
 
     </main>
-
+    <script src="./assets/js/admin.js"></script>
     <script src="./assets/js/login.js"></script>
     <script src="./assets/js/dashboard.js"></script>
     <script src="./assets/js/main.js"></script>
