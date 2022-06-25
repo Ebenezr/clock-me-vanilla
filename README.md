@@ -89,7 +89,7 @@ clone the repo using the command
 - open the code in vs code with command
 - `code .`
 - install json server using the command
-- ``npm install -g json-server`
+- `npm install -g json-server`
 - start the json server
 - `json-server assets/db/db.json`
 - use live server to run the front end
