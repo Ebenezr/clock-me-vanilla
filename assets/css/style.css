@@ -466,3 +466,20 @@ input {
   display: block;
   font-size: 0.6rem;
 }
+
+.search-btn {
+  border: none;
+  background-color: var(--clr-pry);
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+}
+.search-btn:hover,
+.search-btn:focus {
+  background-color: var(--clr-accent);
+  color: var(--clr-pry);
+}
+.search-bar {
+  padding: 0.2rem 0.6rem;
+  width: 60%;
+}
