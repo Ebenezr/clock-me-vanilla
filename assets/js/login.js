@@ -18,7 +18,6 @@ function loginAuth(users) {
   logInForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    console.log(email.value);
     let acc;
     for (let data of users) {
       //vadidates email

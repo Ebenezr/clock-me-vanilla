@@ -4,6 +4,7 @@ let timeOut;
 let usersn;
 document.addEventListener("DOMContentLoaded", () => {
   //fetch data from local api
+  //filterUsers().then((data) => console.log(data));
   fetchData().then((data) => {
     renderUsers(data);
     clockOutTime(data);
@@ -129,16 +130,18 @@ function clockOutTime(users) {
   });
 }
 //search user funtion
-const searchBar = document.querySelector("#search");
-searchBar.addEventListener("keyup", (event) => {
-  const letter = event.target.value;
+const searchBar = document.getElementById("search-form");
+
+searchBar.addEventListener("submit", (event) => {
+  event.preventDefault();
+
   usersList.innerHTML = "";
-
-  const userListr = usersn.filter((user) => {
-    //user = users.name;
-    //console.log(user);
-    return user.startsWith(letter);
-  });
-
-  userListr.forEach((element) => renderUsers(element));
+  let str = document.getElementById("search-str");
+  letter = str.value;
+  filterUsers(letter).then((data) => renderUsers(data));
 });
+
+async function filterUsers(str) {
+  const users = await fetch(`http://localhost:3000/users?name_like=${str}`);
+  return users.json();
+}

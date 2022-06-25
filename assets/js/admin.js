@@ -143,3 +143,19 @@ function addEmpoyee(users) {
     }
   });
 }
+//search user funtion
+const searchAdmin = document.getElementById("search-form-admin");
+
+searchAdmin.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  employeesList.innerHTML = "";
+  let str = document.getElementById("search-str-admin");
+  letter = str.value;
+  filterUsersAdmin(letter).then((data) => renderEmployees(data));
+});
+
+async function filterUsersAdmin(str) {
+  const users = await fetch(`http://localhost:3000/users?name_like=${str}`);
+  return users.json();
+}
