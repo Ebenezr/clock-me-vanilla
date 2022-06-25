@@ -35,7 +35,6 @@ function renderEmployees(users) {
       adminName.value = users.name;
       adminTitle.value = users.designation;
       adminPassword.value = users.password;
-      //timeStampList.reload();
     });
   });
 }
@@ -53,9 +52,6 @@ function updateEmpoyee(users) {
           name: adminName.value,
           designation: adminTitle.value,
         };
-
-        //console.log(newVotes)
-
         fetch(`http://localhost:3000/users/${index + 1}`, {
           method: "PATCH",
           headers: {
@@ -67,8 +63,6 @@ function updateEmpoyee(users) {
           .then((res) => res.json())
           .then((users) => {
             alert("successfuly Updated");
-            //console.log(users)
-            // calSalary(users);
           })
           .catch(function () {});
       } else {
@@ -82,7 +76,6 @@ function deleteEmpoyee(users) {
     for (let data of users) {
       if (adminId.value === data.id) {
         const index = users.indexOf(data);
-        //console.log(newVotes)
 
         fetch(`http://localhost:3000/users/${index + 1}`, {
           method: "DELETE",
@@ -94,8 +87,6 @@ function deleteEmpoyee(users) {
           .then((res) => res.json())
           .then((users) => {
             alert("Employee Deleted");
-            //console.log(users)
-            // calSalary(users);
           })
           .catch(function () {});
       } else {
@@ -115,9 +106,6 @@ function addEmpoyee(users) {
         name: adminName.value,
         designation: adminTitle.value,
       };
-
-      //console.log(newVotes)
-
       fetch(`http://localhost:3000/users`, {
         method: "POST",
         headers: {
@@ -129,8 +117,6 @@ function addEmpoyee(users) {
         .then((res) => res.json())
         .then((users) => {
           alert("Successfuly Added");
-          //console.log(users)
-          // calSalary(users);
         })
         .catch(function () {});
     }

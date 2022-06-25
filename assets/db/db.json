@@ -8,7 +8,7 @@
       "designation": "Graphics Designer",
       "timestamp": [
         [
-          "Sat, 25 Jun 2022 11:32:20 GMT - Sat, 25 Jun 2022 11:31:57 GMT"
+          "Sat, 25 Jun 2022 13:26:05 GMT - Sat, 25 Jun 2022 13:26:03 GMT"
         ]
       ],
       "usertype": "admin"
@@ -20,34 +20,19 @@
       "name": "Joy Auma",
       "designation": "Network Admin",
       "timestamp": [
-        [
-          "Sat, 25 Jun 2022 11:10:40 GMT - Sat, 25 Jun 2022 11:01:54 GMT"
-        ]
+        "Sat, 25 Jun 2022 12:44:23 GMT - Sat, 25 Jun 2022 12:44:13 GMT"
       ],
       "usertype": "std"
     },
     {
       "id": "4",
-      "email": "daicy@mail.com",
-      "password": "123daicy",
-      "name": "Daicy Chepyegon",
-      "designation": "HR",
-      "timestamp": [
-        [
-          "Fri, 24 Jun 2022 08:21:21 GMT - Fri, 24 Jun 2022 08:21:11 GMT"
-        ]
-      ],
-      "usertype": "std"
-    },
-    {
-      "id": "5",
       "email": "jared@mail.com",
-      "password": "123t",
+      "password": "123tmlm",
       "name": "Jared Otis",
       "designation": "Senior Developer",
       "timestamp": [
         [
-          "Sat, 25 Jun 2022 11:10:25 GMT - Sat, 25 Jun 2022 11:01:54 GMT"
+          "Fri, 24 Jun 2022 08:21:21 GMT - Fri, 24 Jun 2022 08:21:11 GMT"
         ]
       ],
       "usertype": "std"
@@ -71,6 +56,9 @@
       "password": "2344",
       "name": "Manu Odhis",
       "designation": "CEO",
+      "timestamp": [
+        "Fri, 24 Jun 2022 08:21:21 GMT - Fri, 24 Jun 2022 08:21:11 GMT"
+      ],
       "usertype": "admin"
     },
     {
@@ -78,7 +66,13 @@
       "email": "max@mail.com",
       "password": "464546",
       "name": "Maxwell Miller",
-      "designation": "Network engineer"
+      "designation": "Network engineer",
+      "timestamp": [
+        [
+          "Fri, 24 Jun 2022 08:21:21 GMT - Fri, 24 Jun 2022 08:21:11 GMT"
+        ]
+      ],
+      "usertype": "admin"
     }
   ]
 }

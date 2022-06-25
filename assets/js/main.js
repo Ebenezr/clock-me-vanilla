@@ -124,8 +124,14 @@ searchBar.addEventListener("keyup", (event) => {
   userListr.forEach((element) => renderUsers(element));
 });
 
+function lastSeen(users) {
+  let now = new Date();
+  let difference = Math.abs(now - this.clockOut);
+  days = Math.ceil(difference / (1000 * 3600 * 24));
+  return days;
+}
 // function calSalary(users) {
-//   let mainCard = document.getElementById("main-card");
+//   let mainCard = document.ge  tElementById("main-card");
 //   let timeIn;
 //   mainCard.addEventListener("click", () => {
 //     //console.log("yes");
