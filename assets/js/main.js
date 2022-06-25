@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     clockOutTime(data);
     appendTimestamp(data);
   });
+
   let clockIn = document.getElementById("clock-in");
 
   clockIn.addEventListener("click", () => {
@@ -23,13 +24,22 @@ let userDesignation = document.getElementById("designation");
 let userId = document.getElementById("id");
 let userEmail = document.getElementById("user-email");
 let timeStampList = document.getElementById("timestamp-results");
+let avatar = document.getElementById("avatar");
 
 //async funtion to fetch data from local json
 async function fetchData() {
   const users = await fetch("http://localhost:3000/users");
   return users.json();
 }
-
+//gets random avater images for employees
+async function getAverters() {
+  const users = await fetch("https://randomuser.me/api/");
+  return users.json();
+}
+//apend random image to employee profile
+function updateProfile(profile) {
+  avatar.src = profile.results[0].picture.medium;
+}
 //render users to list with event listners to apend selected user details
 function renderUsers(users) {
   users.forEach((users) => {
@@ -45,7 +55,9 @@ function renderUsers(users) {
       userDesignation.textContent = users.designation;
       userId.textContent = users.id;
       userEmail.textContent = users.email;
-
+      //getAverters().then((data) => console.log(data));
+      //avatar.src = getAverters().then((data) => data.results[0].picture.medium);
+      getAverters().then((data) => updateProfile(data));
       timeStampList.innerHTML = "";
       appendTimestamp(users);
 
