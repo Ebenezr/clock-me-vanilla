@@ -66,6 +66,7 @@ ul {
   grid-template-columns: 50% auto;
   grid-template-rows: 100%;
   overflow: hidden;
+  display: none;
 }
 #right-side {
   background-color: var(--clr-pry);
@@ -82,8 +83,6 @@ ul {
   background-color: var(--clr-secondary);
   opacity: 0.2;
   border-radius: 42% 58% 79% 21% / 77% 56% 44% 23%;
-}
-.form-logo {
 }
 .article-title {
   margin: 1rem 0;
@@ -174,7 +173,7 @@ input {
   background-color: var(--clr-accent);
   color: var(--clr-white);
 }
-/*********************************************/
+/***********************************************************/
 /*employee panel*/
 .logo.view {
   color: var(--clr-pry);
@@ -185,18 +184,31 @@ input {
   height: 100%;
   color: var(--clr-pry);
   display: none;
+  overflow: hidden;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.wrapper::-webkit-scrollbar {
+  display: none;
 }
 .empoyee-card-wrapper {
+  width: 100%;
   padding: 0.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1rem;
+  grid-gap: 0.5rem;
   place-content: center;
   place-items: center;
 }
 .card {
-  width: 25ch;
-  height: 10ch;
+  width: 12rem;
+  height: 5rem;
   border-radius: 0.7rem;
   background-color: var(--clr-secondary);
   display: flex;
@@ -206,8 +218,8 @@ input {
 .card img {
   background-color: #14213d;
   border-radius: 50%;
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
   background-size: cover;
   object-fit: cover;
 }
@@ -219,6 +231,7 @@ input {
   font-weight: 500;
   gap: 0.5rem;
   position: relative;
+  font-size: 0.7rem;
 }
 .top::after {
   content: "";
@@ -239,11 +252,16 @@ input {
   justify-content: space-around;
   align-items: center;
 }
+.bottom h5 {
+  font-weight: 400;
+  font-size: 0.6rem;
+}
 .bottom p {
   font-size: 0.6rem;
   color: var(--clr-accent);
+  font-weight: 200;
 }
-/***********************************/
+/********************************************************************/
 /*timestamp*/
 #timecard {
   width: 100%;
@@ -252,11 +270,11 @@ input {
 .timecard-main-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2rem auto;
+  grid-template-rows: 1.5rem auto;
   grid-template-areas:
     "header main"
     "results main";
-  grid-gap: 1rem;
+  grid-gap: 0.5rem;
 }
 #search {
   grid-area: header;
@@ -275,12 +293,22 @@ input {
   border-radius: 0.7rem;
   padding: 1rem;
   gap: 1rem;
+  max-height: 100%;
 }
+#list-results {
+  padding-left: 0.5rem;
+}
+#list-results li {
+  padding: 0.3rem 0.5rem;
+}
+
 /*employee profile*/
 .main-card img {
   display: block;
-  width: 10rem;
-  height: 12rem;
+  width: 5rem;
+  height: 6.5rem;
+  border-radius: 0.2rem;
+  overflow: hidden;
   object-fit: cover;
   background-color: #14213d;
 }
@@ -292,6 +320,7 @@ input {
 }
 #timestamp-results li {
   font-size: 0.5rem;
+  padding: 0.2rem;
 }
 #timestamp-results li:nth-last-child(odd) {
   background-color: var(--clr-white);
@@ -301,11 +330,24 @@ input {
   background-color: var(--clr-pry);
   color: var(--clr-white);
 }
-/*******/
+/******************************************************/
 #dashboard {
   display: none;
   width: 100%;
   height: 100%;
+  position: relative;
+}
+#dashboard::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: var(--clr-pry);
+  opacity: 0.9;
+  border-radius: 42% 58% 79% 21% / 77% 56% 44% 23%;
 }
 /***********************************************************/
 /*ADMIN SECTION*/
@@ -315,14 +357,17 @@ input {
   height: 100%;
 }
 #admin-form {
-  height: 100%;
   width: 100%;
+}
+#admin-form label {
+  font-size: 0.6rem;
 }
 .btn-wrapper {
   display: flex;
+
   flex-direction: row;
   justify-content: space-evenly;
-  gap: 1rem;
+  gap: 0.4rem;
   padding: 0.5rem;
 }
 .delete {
@@ -331,16 +376,13 @@ input {
 .update {
   background-color: green;
 }
-#admin-form {
-  /* background-color: #14213d; */
-  height: auto;
-  margin: 1rem 0;
-}
+
 .admin-input {
   width: 100%;
-  padding: 0.4rem 0.3rem;
+  padding: 0.1rem 0.3rem;
   border-radius: 0.1rem;
   border: none;
   color: var(--clr-pry);
   display: block;
+  font-size: 0.6rem;
 }
