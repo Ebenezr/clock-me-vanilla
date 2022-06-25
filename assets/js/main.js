@@ -25,7 +25,7 @@ let userDesignation = document.getElementById("designation");
 let userId = document.getElementById("id");
 let userEmail = document.getElementById("user-email");
 let timeStampList = document.getElementById("timestamp-results");
-let avatarImg = document.getElementById("avatar");
+let avatarImg = document.getElementById("avatar-img");
 
 //async funtion to fetch data from local json
 async function fetchData() {
@@ -39,7 +39,7 @@ async function getAverters() {
 }
 //apend random image to employee profile
 function updateProf(profile) {
-  avatarImg.src = profile.results[0].picture.medium;
+  avatarImg.src = profile.results[0].picture.large;
 }
 //render users to list with event listners to apend selected user details
 function renderUsers(users) {

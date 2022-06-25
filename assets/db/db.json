@@ -8,34 +8,10 @@
       "designation": "Graphics Designer",
       "timestamp": [
         [
-          "Sat, 25 Jun 2022 13:26:05 GMT - Sat, 25 Jun 2022 13:26:03 GMT"
+          "Sat, 25 Jun 2022 23:05:41 GMT - Sat, 25 Jun 2022 23:03:52 GMT"
         ]
       ],
       "usertype": "admin"
-    },
-    {
-      "id": "3",
-      "email": "joy@mail.com",
-      "password": "123t",
-      "name": "Joy Auma",
-      "designation": "Network Admin",
-      "timestamp": [
-        "Sat, 25 Jun 2022 12:44:23 GMT - Sat, 25 Jun 2022 12:44:13 GMT"
-      ],
-      "usertype": "std"
-    },
-    {
-      "id": "4",
-      "email": "jared@mail.com",
-      "password": "123tmlm",
-      "name": "Jared Otis",
-      "designation": "Senior Developer",
-      "timestamp": [
-        [
-          "Sat, 25 Jun 2022 19:29:56 GMT - Sat, 25 Jun 2022 19:29:26 GMT"
-        ]
-      ],
-      "usertype": "std"
     },
     {
       "id": "10",
@@ -67,6 +43,13 @@
       "password": "123t",
       "name": "Leo Kamau",
       "designation": "Junior Dev"
+    },
+    {
+      "id": "12",
+      "email": "james@mail.com",
+      "password": "456456",
+      "name": "James elf",
+      "designation": "Network engineer"
     }
   ]
 }

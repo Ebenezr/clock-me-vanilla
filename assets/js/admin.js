@@ -76,8 +76,7 @@ function updateEmpoyee(users) {
           .then((res) => res.json())
           .then((users) => {
             alert("successfuly Updated");
-            employeesList.innerHTML = "";
-            fetchEmployees();
+            // employeesList.innerHTML = "";
           })
           .catch(function () {});
       } else {
@@ -102,8 +101,8 @@ function deleteEmpoyee(users) {
         })
           .then((res) => res.json())
           .then((users) => {
-            employeesList.innerHTML = "";
-            fetchEmployees();
+            // employeesList.innerHTML = "";
+            // renderEmployees(users);
             alert("Employee Deleted");
           })
           .catch(function () {});
@@ -135,8 +134,6 @@ function addEmpoyee(users) {
       })
         .then((res) => res.json())
         .then((users) => {
-          employeesList.innerHTML = "";
-          fetchEmployees();
           alert("Successfuly Added");
         })
         .catch(function () {});
