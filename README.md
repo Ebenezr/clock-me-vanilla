@@ -14,7 +14,7 @@ Clock-me: is is a web application used to keep track of employees and thier cloc
 
 ## SCREENSHOTS
 
----
+## ![image](./assets/images/FireShot%20Capture%20001%20-%20Dashboard%20-%20127.0.0.1.png)
 
 ## Table of content
 

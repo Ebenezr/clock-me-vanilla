@@ -356,8 +356,8 @@ input {
   align-items: center;
   font-family: "Kaushan Script", cursive;
   font-weight: 300;
-  width: 35%;
-  height: 40%;
+  width: 55%;
+  height: 65%;
   position: relative;
   color: #fff;
 }
@@ -380,7 +380,7 @@ input {
 }
 #five {
   position: absolute;
-  top: 53%;
+  top: 57%;
   font-size: 3.6rem;
   left: 23%;
 }
@@ -392,17 +392,18 @@ input {
   background-color: var(--clr-accent);
   padding: 0.1rem 0.4rem;
   font-size: 3rem;
-  border-radius: 0.3rem;
-  border: grey 0.2rem solid;
+  border-radius: 1rem;
+  border: grey 0.1rem solid;
 }
 
 #dashboard::before {
   content: "";
   position: absolute;
-  width: 50%;
-  height: 50%;
+  width: 70%;
+  height: 70%;
 
   left: 50%;
+  top: -20%;
   transform: translate(-50%, 50%);
   background-color: var(--clr-pry);
   opacity: 0.9;
