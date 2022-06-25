@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetchEmployeesData();
+  getUsers();
   let username = document.getElementById("card-title");
+
+  //function to compute lastseen
   var calLastSeen = (users) => {
     let timeIn;
     for (let data of users) {
@@ -24,40 +26,47 @@ document.addEventListener("DOMContentLoaded", () => {
   let cardTitle = document.getElementById("card-designation");
   let card = document.getElementById("card");
   let cardswrapper = document.getElementById("employee-cards");
-  function fetchEmployeesData() {
-    fetch("http://localhost:3000/users")
-      .then((resp) => resp.json())
-      .then((users) => {
-        appendCard(users);
-        //calLastSeen(users);
-      });
-  }
 
+  //call fetch with apend card as argument
+  //funtion fetch and renders data from randomuser api
+  getUsers().then((data) => appendCard(data));
   function appendCard(users) {
-    users.forEach((users) => {
+    users.results.forEach((users) => {
       let list = document.createElement("li");
       //timeIn = users.timestamp.split("-");
       // let i = (stamp) => {
       //   timeIn = stamp.split("-");
-
+      //convert date string to date object
       //   var serialized = JSON.stringify(timeIn[1]);
       //   var tStart = new Date(JSON.parse(serialized));
       //   console.log(tStart);
       //   return tStart;
       // };
 
+      //data.results[0].login.username;
       list.innerHTML = `
            <div class=card>
               <div class=top>
-                   <img src=>
-                  <h3 id=card-title> ${users.name}</h3>
+                   <img src=${users.picture.medium}>
+                  <h3 id=card-title> ${
+                    users.name.first + " " + users.name.last
+                  }</h3>
               </div>
               <div class="bottom">
-                <h5 id="card-designation">${users.designation}</h5>
-                <p>2 <span>days ago</span></p>
+                <h5 id="card-designation">${users.location.city}</h5>
+                <p>${Math.floor(
+                  Math.random() * 10
+                )}<span>&nbsp;days ago</span></p>
               </div>
           </div>`;
       cardswrapper.appendChild(list);
     });
   }
 });
+//randomuser api fetch
+async function getUsers() {
+  const users = await fetch("https://randomuser.me/api/?results=10");
+  return users.json();
+}
+
+//getUsers().then((data) => console.log(data.results[0].login.username));

@@ -3,7 +3,7 @@
     {
       "id": "1",
       "email": "ebe@mail.com",
-      "password": "123r",
+      "password": "123",
       "name": "Bukosia Ebenezar",
       "designation": "Graphics Designer",
       "timestamp": [
@@ -32,7 +32,7 @@
       "designation": "Senior Developer",
       "timestamp": [
         [
-          "Fri, 24 Jun 2022 08:21:21 GMT - Fri, 24 Jun 2022 08:21:11 GMT"
+          "Sat, 25 Jun 2022 18:14:01 GMT - Sat, 25 Jun 2022 18:13:54 GMT"
         ]
       ],
       "usertype": "std"

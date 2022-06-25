@@ -19,7 +19,7 @@
         <!-- navigation panel -->
         <nav id="side-bar">
             <div class="logo">
-                <h3>CLOCK-ME</h3>
+                <h3><i class=" logo-icon fas fa-stopwatch"></i>CLOCK-ME</h3>
             </div>
             <div class="buttons-container">
                 <buttton class="btn-pry" id="btn-dashboard"><i id="dashboard-icon"
@@ -36,12 +36,20 @@
         <!-- login page -->
         <section id="login" class="login-signup">
             <div id="right-side">
-                <i class="fa-solid fa-flux-capacitor"></i>
+                <div id="dash-content">
+                    <div>
+                        <p id="one">Take it</p>
+                        <p id="two">to</p>
+                        <p id="three">the</p>
+                        <p id="four">next</p>
+                        <p id="five">Levels</p>
+                    </div>
+                </div>
             </div>
 
             <form action="" class="login-form" id="login-page" autocomplete="off">
                 <div class="form-logo">
-                    <h4>CLOCK-ME</h4>
+                    <h4><i class=" logo-icon fas fa-stopwatch"></i>CLOCK-ME</h4>
                 </div>
                 <h3 class="article-title">Login</h3>
                 <label for="email">Email</label>
@@ -76,9 +84,9 @@
             </section>
             <section id="admin" class="main-view" aria-hidden="true">
                 <div class="logo view">
-                    <h4>CLOCK-ME</h4>
+                    <h4><i class=" logo-icon fas fa-stopwatch"></i>CLOCK-ME</h4>
                 </div>
-                <h3>Clock-in/out</h3>
+                <h4>Clock-in/out</h4>
                 <div class="wrapper">
                     <article class="timecard-main-wrapper">
                         <input type="search" id="search" placeholder="search by name..">
@@ -121,9 +129,9 @@
             <!-- employee section -->
             <section id="employee" class="main-view" aria-hidden="true">
                 <div class="logo view">
-                    <h4>CLOCK-ME</h4>
+                    <h4><i class=" logo-icon fas fa-stopwatch"></i>CLOCK-ME</h4>
                 </div>
-                <h3>Employees</h3>
+                <h4>Employees</h4>
                 <div class="wrapper">
                     <ul class="empoyee-card-wrapper" id="employee-cards">
                         <!-- <div class="card" id="card">
@@ -145,9 +153,9 @@
             <!-- time tard section -->
             <section id="timecard" class="main-view" aria-hidden="true">
                 <div class="logo view">
-                    <h4>CLOCK-ME</h4>
+                    <h4><i class=" logo-icon fas fa-stopwatch"></i>CLOCK-ME</h4>
                 </div>
-                <h3>Clock-in/out</h3>
+                <h4>Clock-in/out</h4>
                 <div class="wrapper">
                     <article class="timecard-main-wrapper">
                         <input type="search" id="search" placeholder="search by name..">
@@ -164,7 +172,7 @@
                                 <h3 id="title">Dennis Kwamboka</h3>
                                 <h5 id="designation">Technical Support</h5>
                                 <h6 id="user-email">deniss@mail.com</h6>
-                                <h5>Staff ID: <span id="id">84646R</span></h5>
+                                <h5 id="user-id">Staff ID: <span id="id">84646R</span></h5>
                                 <span>
                                     <button id="clock-in" class="btn-sec">Clock-in</button>
                                     <button id="clock-out" class="active btn-sec">Clock-out</button>

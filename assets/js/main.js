@@ -3,7 +3,12 @@ let timeIn;
 let timeOut;
 let usersn;
 document.addEventListener("DOMContentLoaded", () => {
-  fetchData();
+  //fetch data from local api
+  fetchData().then((data) => {
+    renderUsers(data);
+    clockOutTime(data);
+    appendTimestamp(data);
+  });
   let clockIn = document.getElementById("clock-in");
 
   clockIn.addEventListener("click", () => {
@@ -18,16 +23,14 @@ let userDesignation = document.getElementById("designation");
 let userId = document.getElementById("id");
 let userEmail = document.getElementById("user-email");
 let timeStampList = document.getElementById("timestamp-results");
-function fetchData() {
-  fetch("http://localhost:3000/users")
-    .then((resp) => resp.json())
-    .then((users) => {
-      renderUsers(users);
-      clockOutTime(users);
-      appendTimestamp(users);
-    });
+
+//async funtion to fetch data from local json
+async function fetchData() {
+  const users = await fetch("http://localhost:3000/users");
+  return users.json();
 }
 
+//render users to list with event listners to apend selected user details
 function renderUsers(users) {
   users.forEach((users) => {
     let list = document.createElement("li");
@@ -42,6 +45,7 @@ function renderUsers(users) {
       userDesignation.textContent = users.designation;
       userId.textContent = users.id;
       userEmail.textContent = users.email;
+
       timeStampList.innerHTML = "";
       appendTimestamp(users);
 
@@ -58,10 +62,13 @@ function appendTimestamp(users) {
   }
 }
 
+//function retuns clock in timestamp
 function clockInTime() {
   timeIn = new Date();
   return timeIn;
 }
+
+//funtion returns clock out timestamp and POSTS TO datadase to updated timestamp
 function clockOutTime(users) {
   timeOut = new Date();
 
@@ -123,69 +130,3 @@ searchBar.addEventListener("keyup", (event) => {
 
   userListr.forEach((element) => renderUsers(element));
 });
-
-function lastSeen(users) {
-  let now = new Date();
-  let difference = Math.abs(now - this.clockOut);
-  days = Math.ceil(difference / (1000 * 3600 * 24));
-  return days;
-}
-// function calSalary(users) {
-//   let mainCard = document.ge  tElementById("main-card");
-//   let timeIn;
-//   mainCard.addEventListener("click", () => {
-//     //console.log("yes");
-//     for (let data of users) {
-//       if (userId.innerText === data.id) {
-//         //   const index = users.indexOf(data);
-//         // console.log(data.timestamp);
-//         for (let i in data.timestamp) {
-//           timeIn = data.timestamp[i].split("-");
-//           //console.log(timeIn[0]);
-//           // console.log(timeIn[1]);
-//           //console.log("nope");
-//         }
-//         //convert date f=string back to date obj
-//         var serialized = JSON.stringify(timeIn[0]);
-//         var tStart = new Date(JSON.parse(serialized));
-//         var serializedp = JSON.stringify(timeIn[1]);
-//         var tEnd = new Date(JSON.parse(serializedp));
-
-//         console.log(tStart);
-
-//         //console.log(deserialized.getHours());
-//         let now = new Date();
-//         now.toGMTString();
-//         // console.log(typeof now);
-//         //console.log(now.toGMTString());
-//       }
-//     }
-//   });
-// }
-
-// class Timestamp{
-//     constructor(clockIn,clockOut,timeStamp){
-//         this.clockIn=clockIn;
-//         this.clockOut=clockOut;
-//         this.timeStamp=timeStamp
-//     }
-//     get totalHours(){
-//         return this.clockOut.getHours()-this.clockIn.getHours();
-//     }
-//     get lastSeen(){
-//         let now=new Date();
-//         let difference = Math.abs(now - this.clockOut);
-//         days =Math.ceil(difference/(1000*3600*24));
-//         return days;
-//     }
-//     get weekWage(){
-//         this.timeStamp=[
-//             ['Thu, 23 Jun 2022 07:21:09  GMT','Thu, 23 Jun 2022 17:21:09  GMT'],
-//             ['Thu, 24 Jun 2022 07:21:09  GMT','Thu, 24 Jun 2022 17:21:09  GMT']
-//         ]
-//         const time = this.timeStamp.split(' ');
-// console.log(words[3]);
-
-//     }
-
-// }
