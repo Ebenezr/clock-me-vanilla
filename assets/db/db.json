@@ -3,7 +3,7 @@
     {
       "id": "1",
       "email": "ebe@mail.com",
-      "password": "123",
+      "password": "5555",
       "name": "Bukosia Ebenezar",
       "designation": "Graphics Designer",
       "timestamp": [
@@ -32,20 +32,7 @@
       "designation": "Senior Developer",
       "timestamp": [
         [
-          "Sat, 25 Jun 2022 18:14:01 GMT - Sat, 25 Jun 2022 18:13:54 GMT"
-        ]
-      ],
-      "usertype": "std"
-    },
-    {
-      "id": "7",
-      "email": "anita@mail.com",
-      "password": "123t",
-      "name": "Anita K",
-      "designation": "UX/UI Desiner",
-      "timestamp": [
-        [
-          "Fri, 24 Jun 2022 08:21:21 GMT - Fri, 24 Jun 2022 08:21:11 GMT"
+          "Sat, 25 Jun 2022 19:29:56 GMT - Sat, 25 Jun 2022 19:29:26 GMT"
         ]
       ],
       "usertype": "std"
@@ -73,6 +60,13 @@
         ]
       ],
       "usertype": "admin"
+    },
+    {
+      "id": "11",
+      "email": "leo@mail.com",
+      "password": "123t",
+      "name": "Leo Kamau",
+      "designation": "Junior Dev"
     }
   ]
 }

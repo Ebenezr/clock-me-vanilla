@@ -10,6 +10,7 @@ const userDel = document.getElementById("admin-delete");
 let adminPassword = document.getElementById("admin-password");
 const adminAdd = document.getElementById("admin-add");
 const adminForm = document.getElementById("admin-form");
+let avatar = document.getElementById("avatar");
 function fetchEmployees() {
   fetch("http://localhost:3000/users")
     .then((resp) => resp.json())
@@ -20,6 +21,16 @@ function fetchEmployees() {
       addEmpoyee(users);
     });
 }
+//fetch data from randomuserapi
+async function getAverters() {
+  const users = await fetch("https://randomuser.me/api/");
+  return users.json();
+}
+//apend random image to employee profile
+function updateProfile(profile) {
+  avatar.src = profile.results[0].picture.large;
+}
+//render chosen employee data on form
 function renderEmployees(users) {
   users.forEach((users) => {
     let list = document.createElement("li");
@@ -35,9 +46,11 @@ function renderEmployees(users) {
       adminName.value = users.name;
       adminTitle.value = users.designation;
       adminPassword.value = users.password;
+      getAverters().then((data) => updateProfile(data));
     });
   });
 }
+//update employee details
 function updateEmpoyee(users) {
   adminForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -63,6 +76,8 @@ function updateEmpoyee(users) {
           .then((res) => res.json())
           .then((users) => {
             alert("successfuly Updated");
+            employeesList.innerHTML = "";
+            fetchEmployees();
           })
           .catch(function () {});
       } else {
@@ -70,6 +85,7 @@ function updateEmpoyee(users) {
     }
   });
 }
+//deletes employee from database
 function deleteEmpoyee(users) {
   userDel.addEventListener("click", (event) => {
     event.preventDefault();
@@ -86,6 +102,8 @@ function deleteEmpoyee(users) {
         })
           .then((res) => res.json())
           .then((users) => {
+            employeesList.innerHTML = "";
+            fetchEmployees();
             alert("Employee Deleted");
           })
           .catch(function () {});
@@ -94,6 +112,7 @@ function deleteEmpoyee(users) {
     }
   });
 }
+//add employee function
 function addEmpoyee(users) {
   adminAdd.addEventListener("click", (event) => {
     event.preventDefault();
@@ -116,6 +135,8 @@ function addEmpoyee(users) {
       })
         .then((res) => res.json())
         .then((users) => {
+          employeesList.innerHTML = "";
+          fetchEmployees();
           alert("Successfuly Added");
         })
         .catch(function () {});

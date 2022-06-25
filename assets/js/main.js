@@ -24,7 +24,7 @@ let userDesignation = document.getElementById("designation");
 let userId = document.getElementById("id");
 let userEmail = document.getElementById("user-email");
 let timeStampList = document.getElementById("timestamp-results");
-let avatar = document.getElementById("avatar");
+let avatarImg = document.getElementById("avatar");
 
 //async funtion to fetch data from local json
 async function fetchData() {
@@ -37,8 +37,8 @@ async function getAverters() {
   return users.json();
 }
 //apend random image to employee profile
-function updateProfile(profile) {
-  avatar.src = profile.results[0].picture.medium;
+function updateProf(profile) {
+  avatarImg.src = profile.results[0].picture.medium;
 }
 //render users to list with event listners to apend selected user details
 function renderUsers(users) {
@@ -57,7 +57,7 @@ function renderUsers(users) {
       userEmail.textContent = users.email;
       //getAverters().then((data) => console.log(data));
       //avatar.src = getAverters().then((data) => data.results[0].picture.medium);
-      getAverters().then((data) => updateProfile(data));
+      getAverters().then((data) => updateProf(data));
       timeStampList.innerHTML = "";
       appendTimestamp(users);
 
@@ -128,7 +128,7 @@ function clockOutTime(users) {
     }
   });
 }
-
+//search user funtion
 const searchBar = document.querySelector("#search");
 searchBar.addEventListener("keyup", (event) => {
   const letter = event.target.value;
