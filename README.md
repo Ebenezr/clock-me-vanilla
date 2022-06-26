@@ -34,6 +34,10 @@ Clock-me: is is a web application used to keep track of employees and thier cloc
 
 ### ![image](./assets/images/timecard.png)
 
+## Demo
+
+### ![Demo](https://user-images.githubusercontent.com/37300065/175804555-157ecd6a-79a3-43a6-9eef-6261aea4dc33.mp4)
+***
 ## Table of content
 
 - [Technologies](#description)
