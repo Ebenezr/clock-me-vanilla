@@ -34,9 +34,9 @@ Clock-me: is is a web application used to keep track of employees and thier cloc
 
 ### ![image](./assets/images/timecard.png)
 
-## Demo
+# Figma design
 
-### ![Demo](https://user-images.githubusercontent.com/37300065/175804555-157ecd6a-79a3-43a6-9eef-6261aea4dc33.mp4)
+### https://www.figma.com/file/wVhKPeexcomTHjNPxt2nps/clock-me?node-id=0%3A1
 ***
 ## Table of content
 

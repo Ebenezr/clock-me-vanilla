@@ -101,6 +101,7 @@ function clockOutTime(users) {
 
           //console.log(newtimestamp);
           upDateInfo = {
+            id:users.id,
             timestamp: [...newt],
           };
         }
