@@ -45,8 +45,9 @@ Clock-me: is is a web application used to keep track of employees and thier cloc
 - [Features](#features)
 - [Setup-process](#setup_process)
 - [Project-usage](#project-usage)
-- [Copyright](#copyright)
 - [Licence](#licence)
+- [Copyright](#copyright)
+
 
 ---
 
@@ -56,7 +57,8 @@ languages used are:
 
 - HTML :HTML5 -which is used to create the structure of thr page
 - CSS :CSS4 -used to style the page
-- JavaScript:ES6 -used to code app logic
+- JavaScript:ES6 -used to code app backend and front end
+- JSON : used as database
 
 ---
 
