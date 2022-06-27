@@ -123,6 +123,7 @@ function addEmpoyee(users) {
         password: adminPassword.value,
         name: adminName.value,
         designation: adminTitle.value,
+        timestamp:[]
       };
       fetch(`http://localhost:3000/users`, {
         method: "POST",
@@ -144,14 +145,14 @@ function addEmpoyee(users) {
 const searchAdmin = document.getElementById("search-form-admin");
 
 
-searchAdmin.addEventListener("change", (event) => {
-  event.preventDefault();
+// searchAdmin.addEventListener("change", (event) => {
+//   event.preventDefault();
 
-  employeesList.innerHTML = "";
-  let str = document.getElementById("search-str-admin");
-  letter = str.value;
-  filterUsersAdmin(letter).then((data) => renderEmployees(data));
-});
+//   employeesList.innerHTML = "";
+//   let str = document.getElementById("search-str-admin");
+//   letter = str.value;
+//   filterUsersAdmin(letter).then((data) => renderEmployees(data));
+// });
 
 searchAdmin.addEventListener("submit", (event) => {
   event.preventDefault();

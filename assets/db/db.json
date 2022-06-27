@@ -8,14 +8,14 @@
       "designation": "Graphics Designer",
       "timestamp": [
         [
-          "Sun, 26 Jun 2022 05:22:15 GMT - Sun, 26 Jun 2022 05:20:24 GMT"
+          "Mon, 27 Jun 2022 08:03:24 GMT - Mon, 27 Jun 2022 08:00:11 GMT"
         ]
       ],
       "admin": true
     },
     {
       "id": "2",
-      "email": "manu@mail.com",
+      "email": "odhis@mail.com",
       "password": "2344",
       "name": "Manu Odhis",
       "designation": "CEO",
@@ -47,43 +47,47 @@
       "designation": "Junior Dev",
       "timestamp": [
         [
-          "Sun, 26 Jun 2022 05:22:04 GMT - Sun, 26 Jun 2022 05:20:24 GMT"
+          "Mon, 27 Jun 2022 08:03:33 GMT - Mon, 27 Jun 2022 08:00:11 GMT"
         ]
       ],
-      "admin":false
+      "admin": false
     },
     {
       "id": "5",
       "email": "james@mail.com",
       "password": "456456",
       "name": "James elf",
-      "designation": "Network engineer"
+      "designation": "Network engineer",
+      "timestamp": [
+        [
+          "Mon, 27 Jun 2022 07:56:04 GMT - Mon, 27 Jun 2022 07:55:05 GMT"
+        ]
+      ]
     },
     {
-      "id": "6",
-      "email": "ma@mail.com",
-      "password": "23232",
-      "name": "Mard Cleo",
+      "id": "45",
+      "email": "john@mail.com",
+      "password": "123",
+      "name": "masibo john",
+      "designation": "HR"
+    },
+    {
+      "id": "77",
+      "email": "grace@mail.com",
+      "password": "were",
+      "name": "Grace Ananu",
       "designation": "HR",
       "timestamp": [
-        [
-          "Sun, 26 Jun 2022 05:22:04 GMT - Sun, 26 Jun 2022 05:20:24 GMT"
-        ]
-      ],
-      "admin": false
+        []
+      ]
     },
     {
-      "id": "7",
-      "email": "green@mail.com",
-      "password": "7899",
-      "name": "Joyce green",
-      "designation": "Manager Director",
-      "timestamp": [
-        [
-          "Sun, 26 Jun 2022 05:22:11 GMT - Sun, 26 Jun 2022 05:20:24 GMT"
-        ]
-      ],
-      "admin": false
+      "id": "66",
+      "email": "json@gmail.com",
+      "password": "json34@",
+      "name": "Json Server",
+      "designation": "Analitics Eng.",
+      "timestamp": []
     }
   ]
 }
